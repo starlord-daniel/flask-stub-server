@@ -1,0 +1,9 @@
+{
+    "endpoints": [
+        {
+            "name": "hello",
+            "methods": ["GET"],
+            "route": "/"
+        }
+    ]
+}
