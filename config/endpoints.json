@@ -3,7 +3,9 @@
         {
             "name": "hello",
             "methods": ["GET"],
-            "route": "/"
+            "route": "/",
+            "headers": {},
+            "file_path": "data/hello.txt"
         }
     ]
 }
