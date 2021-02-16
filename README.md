@@ -30,5 +30,5 @@ More information can be found on the [Flask installation website](https://flask.
 
 For testing, this project uses `tox`. The tox.ini configures 2 environments: lint and py39.
 
-To run linting, use: `tox -e lint`
-To run the tests with pytest, use: `tox -e py39`
+To only run linting, use: `tox -e lint`
+To only run the tests with pytest, use: `tox -e py39`
