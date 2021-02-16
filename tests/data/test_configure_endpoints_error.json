@@ -1,0 +1,11 @@
+{
+    "endpoints": [
+        {
+            "name": "hello",
+            "methods": ["GET"],
+            "route": "/",
+            "headers": {},
+            "file_path": "data/hello.txt"
+        }
+
+}

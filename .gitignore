@@ -17,4 +17,7 @@ build/
 .tox
 
 .vscode
+
 commitlint.config.js
+
+coverage.xml
