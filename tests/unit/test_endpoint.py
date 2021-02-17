@@ -44,9 +44,9 @@ class EndpointTest(TestCase):
 
     def test_read_file(self):
         file_path = "tests/unit/data/test_file.txt"
-        expected_content = ("This is a test\n"
-                            "it has multiple lines\n"
-                            "oh, even a third, that's crazy! :-O\n")
+        expected_content = (b"This is a test\n"
+                            b"it has multiple lines\n"
+                            b"oh, even a third, that's crazy! :-O\n")
 
         actual_content = read_file(file_path=file_path)
 
