@@ -35,3 +35,14 @@ class ResponseTests(TestCase):
             assert b"This is not the information you are looking for." in response.data
         # Reset the app after testing
         app.url_map = Map()
+
+    def test_endpoint_simple_data_from_file(self):
+        with app.test_client() as test_client:
+            configure_endpoints(
+                app, "tests/functional/data/test_endpoint_simple_data_from_file_config.json")
+            response: Response = test_client.get('/')
+            assert response.status_code == 200
+            assert response.content_type == "text/plain"
+            assert b"Oh, now we can do data from files too? Fancy!" in response.data
+        # Reset the apps url_map after testing (or else we get duplicate routes)
+        app.url_map = Map()
