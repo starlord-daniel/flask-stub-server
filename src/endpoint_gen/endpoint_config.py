@@ -11,14 +11,14 @@ class EndpointConfig():
         The methods fro the endpoint, e.g. GET, POST, PUT, DELETE
     headers : dict
         The headers to return from the endpoint
-    file_path : str
-        The path to the return data of the endpoint
+    data : dict
+        A dictionary containing the location (inline, filepath) and content of data.
     """
 
     def __init__(self, name: str, route: str, methods: list[str],
-                 headers: dict, file_path: str) -> None:
+                 headers: dict, data: dict) -> None:
         self.name = name
         self.route = route
         self.methods = methods
         self.headers = headers
-        self.file_path = file_path
+        self.data = data

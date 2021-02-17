@@ -4,8 +4,25 @@
             "name": "hello",
             "methods": ["GET"],
             "route": "/",
-            "headers": {},
-            "file_path": "data/hello.txt"
+            "headers": {
+                "Content-Type": "text/plain"
+            },
+            "data": {
+                "location": "filepath",
+                "content": "data/hello.txt"
+            }
+        },
+        {
+            "name": "info",
+            "methods": ["GET"],
+            "route": "/info",
+            "headers": {
+                "Content-Type": "text/plain"
+            },
+            "data": {
+                "location": "inline",
+                "content": "This is some information about me: I like Flask and Python :-)"
+            }
         }
     ]
 }

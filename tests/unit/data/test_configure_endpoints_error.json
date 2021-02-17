@@ -5,7 +5,10 @@
             "methods": ["GET"],
             "route": "/",
             "headers": {},
-            "file_path": "data/hello.txt"
+            "data": {
+                "location": "filepath",
+                "content": "data/hello.txt"
+            }
         }
-    ]
+
 }
