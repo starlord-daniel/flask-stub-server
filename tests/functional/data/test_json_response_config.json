@@ -1,0 +1,16 @@
+{
+    "endpoints": [
+        {
+            "name": "json",
+            "methods": ["GET"],
+            "route": "/json",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "data": {
+                "location": "filepath",
+                "content": "tests/functional/data/sample_data_001.json"
+            }
+        }
+    ]
+}
