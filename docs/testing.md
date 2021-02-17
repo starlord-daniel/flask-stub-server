@@ -47,6 +47,6 @@ The following lists states which types of testing are implemented (or planned).
 |Test Type           | Summary  |
 |--------------------|----------|
 |Unit Tests          | Testing the endpoint_config class and endpoint methods stored in src/endpoint_gen. |
+|Functional Tests    | Testing each intended functionality of the application, e.g. do we get the correct return type, or does the config do its intended job. |
 |Smoke Tests         |         |
-|Functional Tests    |         |
 |Integration Tests   |         |
