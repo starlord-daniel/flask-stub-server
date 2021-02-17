@@ -8,8 +8,8 @@
                 "Content-Type": "text/plain"
             },
             "data": {
-                "location": "filepath",
-                "content": "data/hello.txt"
+                "location": "inline",
+                "content": "Just a simple test, move along."
             }
         },
         {
@@ -21,7 +21,7 @@
             },
             "data": {
                 "location": "inline",
-                "content": "This is some information about me: I like Flask and Python :-)"
+                "content": "This is not the information you are looking for."
             }
         }
     ]

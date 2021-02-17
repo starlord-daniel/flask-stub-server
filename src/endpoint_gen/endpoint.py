@@ -25,9 +25,14 @@ def configure_endpoints(app: Flask, config_path: str) -> list[str]:
                     "name": "hello",
                     "methods": ["GET"],
                     "route": "/",
-                    "headers": {},
-                    "file_path": ""
-                }
+                    "headers": {
+                        "Content-Type": "text/plain"
+                    },
+                    "data": {
+                        "location": "filepath",
+                        "content": "data/hello.txt"
+                    }
+                },
             ]
         }
 
@@ -39,7 +44,7 @@ def configure_endpoints(app: Flask, config_path: str) -> list[str]:
     '''
     created_endpoints = []
 
-    # get the file contents
+    # get the config file contents
     config_text = read_file(config_path)
     try:
         # convert from json to dict
@@ -54,7 +59,7 @@ def configure_endpoints(app: Flask, config_path: str) -> list[str]:
             # Add endpoint to list of created endpoints
             created_endpoints.append(endpoint["route"])
 
-            return created_endpoints
+        return created_endpoints
     except Exception as e:
         raise Exception(f"Supplied config is invalid: {config_text}", e)
 
@@ -71,7 +76,10 @@ def create_endpoint(app: Flask, endpoint_config: EndpointConfig):
         The configuration of the endpoint, coming from a json file.
     '''
     def endpoint():
-        response = Response(read_file(endpoint_config["file_path"]))
+        if(endpoint_config["data"]["location"] == "filepath"):
+            response = Response(read_file(endpoint_config["data"]["content"]))
+        else:
+            response = Response(endpoint_config["data"]["content"])
         response.status_code = 200
         response.headers = endpoint_config["headers"]
         return response

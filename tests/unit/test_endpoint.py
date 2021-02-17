@@ -10,11 +10,11 @@ class EndpointTest(TestCase):
     @patch("flask.Flask")
     def test_configure_endpoints(self, mock_Flask: MagicMock,
                                  mock_create_endpoint: MagicMock):
-        config_path = "tests/data/test_configure_endpoints.json"
+        config_path = "tests/unit/data/test_configure_endpoints.json"
         configure_endpoints(app=mock_Flask, config_path=config_path)
         mock_create_endpoint.assert_called_once()
 
-        config_path = "tests/data/test_configure_endpoints_error.json"
+        config_path = "tests/unit/data/test_configure_endpoints_error.json"
         with self.assertRaises(Exception):
             configure_endpoints(mock_Flask, config_path)
 
@@ -43,10 +43,10 @@ class EndpointTest(TestCase):
         mock_add_url_rule.assert_called_once()
 
     def test_read_file(self):
-        file_path = "tests/data/test_file.txt"
-        expected_content = ("This is a test\n"
-                            "it has multiple lines\n"
-                            "oh, even a third, that's crazy! :-O\n")
+        file_path = "tests/unit/data/test_file.txt"
+        expected_content = (b"This is a test\n"
+                            b"it has multiple lines\n"
+                            b"oh, even a third, that's crazy! :-O\n")
 
         actual_content = read_file(file_path=file_path)
 

@@ -15,12 +15,15 @@ def test_endpoint_config_creation():
         "Content-Type": "application/json",
         "Allow": "*"
     }
-    file_path = f"data/{get_random_string(12)}.{get_random_string(3)}"
+    data = {
+        "location": "filepath",
+        "content": f"data/{get_random_string(12)}.{get_random_string(3)}"
+    }
 
-    config = EndpointConfig(name, route, methods, headers, file_path)
+    config = EndpointConfig(name, route, methods, headers, data)
 
     assert config.name == name
     assert config.route == route
     assert config.methods == methods
     assert config.headers == headers
-    assert config.file_path == file_path
+    assert config.data == data

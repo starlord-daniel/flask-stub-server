@@ -21,3 +21,4 @@ build/
 commitlint.config.js
 
 coverage.xml
+.DS_Store

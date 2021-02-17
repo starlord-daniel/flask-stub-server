@@ -1,0 +1,16 @@
+{
+    "endpoints": [
+        {
+            "name": "hello",
+            "methods": ["GET"],
+            "route": "/",
+            "headers": {
+                "Content-Type": "text/plain"
+            },
+            "data": {
+                "location": "filepath",
+                "content": "tests/functional/data/simple_data.txt"
+            }
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "endpoints": [
+        {
+            "name": "jpeg",
+            "methods": ["GET"],
+            "route": "/jpeg",
+            "headers": {
+                "Content-Type": "application/jpeg"
+            },
+            "data": {
+                "location": "filepath",
+                "content": "tests/functional/data/icon.jpg"
+            }
+        }
+    ]
+}
