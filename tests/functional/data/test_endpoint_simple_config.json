@@ -1,0 +1,16 @@
+{
+    "endpoints": [
+        {
+            "name": "hello",
+            "methods": ["GET"],
+            "route": "/",
+            "headers": {
+                "Content-Type": "text/plain"
+            },
+            "data": {
+                "location": "inline",
+                "content": "Hello simple test. I hope you are doing well."
+            }
+        }
+    ]
+}
