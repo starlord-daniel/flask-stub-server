@@ -1,0 +1,16 @@
+{
+    "endpoints": [
+        {
+            "name": "xml",
+            "methods": ["GET"],
+            "route": "/xml",
+            "headers": {
+                "Content-Type": "application/xml"
+            },
+            "data": {
+                "location": "filepath",
+                "content": "tests/functional/data/sample_data_001.xml"
+            }
+        }
+    ]
+}
