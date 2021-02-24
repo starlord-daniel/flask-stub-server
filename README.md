@@ -1,5 +1,7 @@
 # Simple Flask Stub Server
 
+[![Test package with tox](https://github.com/starlord-daniel/flask-stub-server/actions/workflows/ci-pr.yml/badge.svg?branch=main)](https://github.com/starlord-daniel/flask-stub-server/actions/workflows/ci-pr.yml)
+
 Provides the user with a Docker container, that exposes endpoints, which can be configured via json file.
 
 ## Get Started with Flask
