@@ -1,12 +1,12 @@
 from unittest import TestCase
 from unittest.mock import MagicMock, patch
 
-from src.endpoint_gen import (
+from flask_stub_server.endpoint_gen import (
     read_file, configure_endpoints, create_endpoint)
 
 
 class EndpointTest(TestCase):
-    @patch("src.endpoint_gen.endpoint.create_endpoint")
+    @patch("flask_stub_server.endpoint_gen.endpoint.create_endpoint")
     @patch("flask.Flask")
     def test_configure_endpoints(self, mock_Flask: MagicMock,
                                  mock_create_endpoint: MagicMock):
@@ -18,7 +18,7 @@ class EndpointTest(TestCase):
         with self.assertRaises(Exception):
             configure_endpoints(mock_Flask, config_path)
 
-    @patch("src.endpoint_gen.endpoint_config.EndpointConfig")
+    @patch("flask_stub_server.endpoint_gen.endpoint_config.EndpointConfig")
     @patch("flask.Flask.add_url_rule")
     @patch("flask.Flask")
     def test_create_endpoint(self, mock_app: MagicMock,
