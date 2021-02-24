@@ -1,6 +1,6 @@
 from unittest import TestCase
 from flask import Flask, Response
-from src import configure_endpoints
+from flask_stub_server import configure_endpoints
 from werkzeug.routing import Map
 
 app = Flask(__name__)

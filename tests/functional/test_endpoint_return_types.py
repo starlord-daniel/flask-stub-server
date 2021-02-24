@@ -8,7 +8,7 @@ from flask import Flask, Response
 from werkzeug.routing import Map
 
 
-from src import configure_endpoints
+from flask_stub_server import configure_endpoints
 
 app = Flask(__name__)
 

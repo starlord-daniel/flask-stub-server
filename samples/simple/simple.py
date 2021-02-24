@@ -1,6 +1,6 @@
 # Flask docu: https://flask.palletsprojects.com/en/1.1.x/quickstart/
 from flask import Flask
-from src import configure_endpoints
+from flask_stub_server import configure_endpoints
 app = Flask(__name__)
 
 

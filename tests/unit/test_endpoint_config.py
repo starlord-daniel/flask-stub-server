@@ -2,7 +2,7 @@ import random
 
 from tests.utils import get_random_string
 
-from src.endpoint_gen import EndpointConfig
+from flask_stub_server.endpoint_gen import EndpointConfig
 
 
 def test_endpoint_config_creation():

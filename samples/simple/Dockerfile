@@ -1,12 +1,12 @@
 FROM python:3.9-alpine
 
-ENV FLASK_APP=run.py
+ENV FLASK_APP=simple.py
 
 COPY . /flask-app
 
 WORKDIR /flask-app
 
-RUN python -m pip install -r dev-requirements.txt
+RUN python -m pip install --upgrade flask-stub-server
 
 EXPOSE 5000
 
