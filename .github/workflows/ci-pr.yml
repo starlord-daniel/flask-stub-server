@@ -1,0 +1,36 @@
+name: Test package with tox
+
+on:
+    push:
+      branches:
+      - main
+      paths-ignore:
+      - 'docs/**'
+      - 'config/**'
+      - 'data/**'
+    pull_request:
+      branches:
+      - main
+      paths-ignore:
+      - 'docs/**'
+      - 'config/**'
+      - 'data/**'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: [3.9]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python }}
+    - name: Install Tox
+      run: pip install tox
+    - name: Run Tox
+      run: tox
