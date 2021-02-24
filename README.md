@@ -11,16 +11,9 @@ Provides the user with a Docker container, that exposes endpoints, which can be 
 ## Configure your server
 
 The file `endpoints.json` is used to configure the server endpoints.
-To learn more about configuring the endpoints, please take a look at [Configuring the server endpoints](docs/configure-endpoints.md)
+To learn more about the format of the configuration file, please take a look at [Configuring the server endpoints](docs/configure-endpoints.md)
 
-## Start the server
-
-To start the server, use the docker container:
-
-```bash
-docker build -t IMAGE:TAG .
-docker run -p 5000:5000 IMAGE:TAG
-```
+Also, the [samples directory](samples/README.md) shows examples on how to configure and quickly use your own endpoint server.
 
 ## Development
 
@@ -34,3 +27,19 @@ For testing, this project uses `tox`. The tox.ini configures 2 environments: lin
 
 To only run linting, use: `tox -e lint`
 To only run the tests with pytest, use: `tox -e py39`
+
+## Package
+
+View the package [flask-stub-server on pypi](https://pypi.org/project/flask-stub-server/)
+
+The package can be installed by running:
+
+```bash
+pip install flask-stub-server
+```
+
+To upgrade the package, use:
+
+```bash
+pip install --upgrade flask-stub-server
+```
